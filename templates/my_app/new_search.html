@@ -62,26 +62,8 @@
             </div>
 -->
 
+<!--
 
-<div class="row">
-<h2 style="text-align: center">{{ search | title}}</h2>
-
-<div class="col s4">
-                <div class="card">
-                    <div class="card-image">
-                        
-                        <a href="/"><img src="https://i.pinimg.com/originals/73/f5/ac/73f5ace6416be75b0d814af25bb703f1.jpg" alt=""></a>
-                    </div>
-                    <div class="card-content">
-                        <p>テスト</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="/">リストを見る: 価格</a>
-                    </div>
-                </div>
-            </div>
-
-<div class="col s4">
                 <div class="card">
                     <div class="card-image">
                         
@@ -112,6 +94,85 @@
             </div>
 
 </div>
+-->
+
+
+<h2 style="text-align: center">{{ search | title}}</h2>
+
+<div class="row">
+
+{% for post in final_postings %}
+
+
+<div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        
+                        <a href="{{ post.1 }}"><img src="{{ post.3}}" alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.0 }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="{{ post.1 }}">リストを見る: 価格 {{ post.2 }}</a>
+                    </div>
+                </div>
+            </div>
+
+{% endfor %}
+
+
+<!--
+<div class="col s4">
+            <div class="card">
+                    <div class="card-image">
+                        
+                        <a href="/"><img src="https://i.pinimg.com/originals/73/f5/ac/73f5ace6416be75b0d814af25bb703f1.jpg" alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>テスト</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/">リストを見る: 価格</a>
+                    </div>
+                </div>
+            </div>
+
+<div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        
+                        <a href="/"><img src="https://i.pinimg.com/originals/73/f5/ac/73f5ace6416be75b0d814af25bb703f1.jpg" alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>テスト</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/">リストを見る: 価格</a>
+                    </div>
+                </div>
+            </div>
+
+<div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        
+                        <a href="/"><img src="https://i.pinimg.com/originals/73/f5/ac/73f5ace6416be75b0d814af25bb703f1.jpg" alt=""></a>
+                    </div>
+                    <div class="card-content">
+                        <p>テスト</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/">リストを見る: 価格</a>
+                    </div>
+                </div>
+            </div>
+-->
+
+    
+</div>
+
+
 {% endblock content %}
 
 
